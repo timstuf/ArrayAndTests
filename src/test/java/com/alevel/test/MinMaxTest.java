@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertArrayEquals;
 public class MinMaxTest
 {
     private MinMax MinMaxInstance;
@@ -31,7 +31,7 @@ public class MinMaxTest
         int[] array = new int[]{2,2,2,2};
         int[] expected = new int[]{2,2};
         int[] result = MinMaxInstance.FindMinAndMax(array);
-        Assert.assertArrayEquals(expected,result);
+        assertArrayEquals(expected,result);
     }
     @Test
     public void OneToFiveElements()
@@ -39,7 +39,7 @@ public class MinMaxTest
         int[] array = new int[]{1,2,3,4,5};
         int[] expected = new int[]{1,5};
         int[] result = MinMaxInstance.FindMinAndMax(array);
-        Assert.assertArrayEquals(expected,result);
+        assertArrayEquals(expected,result);
     }
     @Test
     public void Negative()
@@ -47,6 +47,6 @@ public class MinMaxTest
         int[] array = new int[]{-1,-2,-3,-4,-5};
         int[] expected = new int[]{-5,-1};
         int[] result = MinMaxInstance.FindMinAndMax(array);
-        Assert.assertArrayEquals(expected,result);
+        assertArrayEquals(expected,result);
     }
 }
